@@ -1,0 +1,11 @@
+{% extends "rest_framework/base.html" %}
+{% load i18n %}
+
+{% block branding %}
+<h3>Docs Store System (by Naseem Amjad)</h3>
+<a rel="nofollow" href="/">        
+        {% trans '(Help on APIs)' %}
+    </a> | <a rel="nofollow" href="/api/">        
+        (API list)
+    </a>
+{% endblock %}

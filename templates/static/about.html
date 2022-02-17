@@ -1,0 +1,54 @@
+<html>
+    
+<head>
+<title>About: Apis</title>
+</head>
+<body>
+    <h2>Help about how to use APIs</h2>
+    Welcome to my page describing about how to use <a href="/api/">APIs</a> for Docs Store System<br>
+<h3>Problem Statement:</h3>
+Create an API that stores “digital documents” in “folders”. Folders or Documents can have one or many associated “Topics”, with short & long-form descriptors.
+<br>
+<h3>Solution:</h3>
+Api has been developed using Python, Django, and PostgreSQL that can be accessed <a href="/api/">here!</a><br>
+3 Tables were designed with the names “Documents”, “Folders”, and “Topics”<br>
+JSON format is used for data transfer. Browsable API is used for documentation that provides list/view (GET) and forms for insertion (POST), updating (PUT) and deletion (DELETE)
+<br>
+<h3>Enpoint Details:</h3>
+<h4>/api/folders/{id}</h4>
+The client can access list of folder(s) by simply hitting /api/folders/ , this will show a list with folder_id that can be noted by user to pass on subsequent requests.
+<br>Example: GET /api/folders/1 will fetch data from table folders having id=1<br> 
+<h4>/api/topics/{id}</h4>
+The client can access list of topic(s) by hitting /api/topics/ , this will list down the topics.<br>
+Example: PUT api/topics/2 and having following in content (body) will update topic having id=2<br>
+{
+    "topic_id": 2,
+    "topic_name": "Arts"
+}
+<br>
+<h4>/api/documents/{id}</h4>
+The client (such as PostMan) can get the list of document(s) by hitting /api/documents/ <br>
+Example: To create a new document entry , POST api/documents/ having following JSON content sent<br>
+{
+    "document_name": "DocfromPostMan",
+    "document_short_description": "from Postman",
+    "folder": 1,
+    "topics": [1,2,3]
+}<br>
+<br>
+Note: detail of folder_id to be sent can be received by GET /api/folders/ , similarly ids of topics can be fetched by GET /api/topics/
+<br>
+<h4>/api/list-documents-in-folderid/?folder_id={id}</h4>
+This endpoint is used to get list of all documents that are associated with a specific Folder{id} ,  you can use filter button at top right location to use GUI to input id.
+<h4>/api/list-documents-of-topicid/?topic__id={id}</h4>
+This endpoint is used to get list of all documents that are associated with a specific Topic(id).
+<h4>/api/search/</h4>
+This is special endpoint that provide filtering of documents based on given folder NAME and given topic NAME.<br>
+Example: To access all the documents in the folder “Customer Feedback” associated with the topic “SpekiLove!” you need to provide following url<br>
+
+GET /api/search/?topic__topic_name=SpekiLove&folder__folder_name=Customer Feedback
+<br>
+<br>
+[<a href="/api/">Work</a> done by <a href="https://courses.cognitiveclass.ai/certificates/ed7c8015c62a45abbfe85ffbf0f69762">Naseem Amjad</a>]
+</body>
+</html>
