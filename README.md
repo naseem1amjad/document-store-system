@@ -1,5 +1,16 @@
 # document-store-system
-API developed using Django (Python) with help of django Rest Framework
+API developed using Django (Python) and django Rest Framework
+
+## Environment Setup
+
+(Helpfull commands)
+pip3 install -r requirements.txt
+
+python manage.py migrate
+
+python manage.py loaddata data4Heroku.json
+
+python manage.py runserver
 
 Help about how to use APIs
 --------------------------
