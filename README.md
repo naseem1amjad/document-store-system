@@ -1,9 +1,10 @@
-# document-store-system
+# Document Store System
 API developed using Django (Python) and django Rest Framework
 
 ## Environment Setup
 
 (Helpfull commands)
+
 pip3 install -r requirements.txt
 
 python manage.py migrate
@@ -15,7 +16,7 @@ python manage.py runserver
 Help about how to use APIs
 --------------------------
 
-Welcome to my page describing about how to use [APIs](/api/) for Docs Store System  
+Welcome to my page describing about how to use [APIs](https://shared-document-store-api.herokuapp.com/api/) for Docs Store System  
 
 ### Problem Statement:
 
@@ -23,7 +24,7 @@ Create an API that stores “digital documents” in “folders”. Folders or D
 
 ### Solution:
 
-Api has been developed using Python, Django, and PostgreSQL that can be accessed [here!](/api/)  
+Api has been developed using Python, Django, and PostgreSQL that can be accessed [here!](https://shared-document-store-api.herokuapp.com/api/)  
 3 Tables were designed with the names “Documents”, “Folders”, and “Topics”  
 JSON format is used for data transfer. Browsable API is used for documentation that provides list/view (GET) and forms for insertion (POST), updating (PUT) and deletion (DELETE)  
 
@@ -62,4 +63,6 @@ This is special endpoint that provide filtering of documents based on given fold
 Example: To access all the documents in the folder “Customer Feedback” associated with the topic “SpekiLove!” you need to provide following url  
 GET /api/search/?topic\_\_topic\_name=SpekiLove&folder\_\_folder\_name=CustomerFeedback  
   
-\[[Work](/api/) done by [Naseem Amjad](https://courses.cognitiveclass.ai/certificates/ed7c8015c62a45abbfe85ffbf0f69762)\]
+\[[Work](https://shared-document-store-api.herokuapp.com/api/) done by [Naseem Amjad](https://courses.cognitiveclass.ai/certificates/ed7c8015c62a45abbfe85ffbf0f69762)\]
+
+naseem@technologist.com
