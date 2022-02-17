@@ -1,9 +1,9 @@
 # Document Store System
-API developed using Django (Python) and django Rest Framework
+API developed using Django (Python) and Django Rest Framework
 
 ## Environment Setup
 
-(Helpfull commands)
+(Helpful commands)
 
 pip3 install -r requirements.txt
 
